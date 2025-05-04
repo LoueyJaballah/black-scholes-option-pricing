@@ -85,11 +85,11 @@ def focus_next(event, next_widget):
 root = tk.Tk()
 root.title("Black-Scholes Option Pricing")
 root.state('zoomed')  # Open maximized/fullscreen
-root.geometry("900x650")  # Optional fallback size
+root.geometry("900x650")  
 root.minsize(800, 600)
 
 style = ttk.Style(root)
-style.theme_use('clam')  # Modern, clean theme
+style.theme_use('clam')  
 
 main_frame = ttk.Frame(root, padding=(15, 15))
 main_frame.pack(fill=tk.BOTH, expand=True)
@@ -117,11 +117,11 @@ def create_labeled_entry(parent, label_text, variable, row):
     parent.columnconfigure(1, weight=1)
     return entry
 
-# Add title label at the top of input_frame
+
 title_label = ttk.Label(input_frame, text="Option Pricing", font=("Segoe UI", 16, "bold"))
 title_label.grid(row=0, column=0, columnspan=2, pady=(0, 15), sticky="nsew")
 
-# Shift all input rows by +1
+
 stock_price_entry = create_labeled_entry(input_frame, "Stock Price (S):", stock_price_var, 1)
 strike_price_entry = create_labeled_entry(input_frame, "Strike Price (K):", strike_price_var, 2)
 time_to_maturity_entry = create_labeled_entry(input_frame, "Time to Maturity (Years):", time_to_maturity_var, 3)
