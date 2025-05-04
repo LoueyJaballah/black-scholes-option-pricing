@@ -16,4 +16,8 @@ A Python Tkinter application to visualize option pricing using the Black-Scholes
 
 ## Run
 ```bash
+# Install dependencies
+Library Requirements.txt
+
+# Run the program
 Code.py
